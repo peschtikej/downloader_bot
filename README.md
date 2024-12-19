@@ -1,4 +1,6 @@
+'''
 BOT_TOKEN=
 HOOK=
 OWNER_ID=
 GROUP_ID=
+'''

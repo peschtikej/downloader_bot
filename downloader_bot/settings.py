@@ -21,12 +21,22 @@ HOOK = getenv("HOOK")
 HOOK = "https://fe04-178-176-167-194.ngrok-free.app"
 OWNER_ID = getenv("OWNER_ID")
 GROUP_ID = getenv("GROUP_ID")
+YA_TOKEN = getenv("YA_TOKEN")
 
 BOT_COMMANDS = [
     BotCommand("start", "Info"),
     BotCommand("help", "Help"),
     BotCommand("feedback", "Feedback"),
 ]
+
+LINK_PATTERNS = {
+        "tiktok": r"(https?://)?(www\.)?(tiktok\.com|tiktokv\.com|vm\.tiktok\.com|m\.tiktok\.com|tiktok\.me|vt\.tiktok\.com|link\.e\.tiktok\.com|us\.tiktok\.com|t\.tiktok\.com|oec-api\.tiktokv\.com|tt\.fun|tt\.inc|tt\.site|shop\.tiktok\.com|tokopedia\.com).*",
+        "instagram": r"(https?://)?(www\.)?instagram\.com/.*",
+        "youtube": r"(https?://)?(www\.)?(youtube\.com|youtu\.be)/.*",
+        "spotify": r"(https?://)?(open\.)?spotify\.com/.*",
+        "yandex_music": r"(https?://)?music\.yandex\.(ru|com)/album/\d+/track/\d+.*",
+        "pinterest": r"(https?://)?(www\.)?(pinterest\.com/|pin\.it)/.*",
+    }
 
 # Application definition
 

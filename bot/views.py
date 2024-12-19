@@ -11,6 +11,7 @@ from telebot.types import Update
 from telebot.apihelper import ApiTelegramException
 from bot.handlers.common import *
 from bot.handlers.user.feedback import feedback
+from bot.handlers.links_handler import sending
 
 from bot import bot
 
@@ -53,3 +54,4 @@ Common
 start = bot.message_handler(commands=["start"])(start)
 help_ = bot.message_handler(commands=["help"])(help_)
 feedback = bot.message_handler(commands=["feedback"])(feedback)
+sending = bot.message_handler(func=lambda message: True)(sending)

@@ -1,4 +1,7 @@
+```python3
 BOT_TOKEN=
 HOOK=
 OWNER_ID=
 GROUP_ID=
+YA_TOKEN=
+```

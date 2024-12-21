@@ -3,7 +3,7 @@ from telebot.types import (
 )
 
 from bot.apis.links_handler import identify_service
-from bot.handlers.user.yandex_music import download_yandex_music_track
+from bot.handlers.user.ya_music import download_yandex_music_track_thread
 from bot import bot
 from django.conf import settings
 
@@ -14,8 +14,7 @@ def sending(message: Message):
         service = identify_service(message.text)
 
         if service == "yandex_music":
-            download_yandex_music_track(message)
-            bot.send_message(user_id, "Yandex Music")
+            download_yandex_music_track_thread(message)
         
         else:
             bot.send_message(chat_id=user_id, text=service)
